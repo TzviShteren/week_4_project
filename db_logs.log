@@ -119,3 +119,450 @@ INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 14:44:56] "GET /normalize/test HTTP/1.1
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:19:33] "GET /normalize/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:19:44] "[35m[1mGET /normalize/start HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:30:55] "[33mGET /mission/start HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:31:08] "[35m[1mGET /mission/test HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:root:2024-09-26 15:31:19.603604: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/, How - GET
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:31:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:root:2024-09-26 15:31:28.827807: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/, How - GET
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:31:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:31:44] "[35m[1mGET /worker/test HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:32:15] "[35m[1mGET /worker/test HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:32:25] "[35m[1mGET /mission/test HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:32:59] "[35m[1mGET /mission/test HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:33:09] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:33:16] "[35m[1mGET /mission/test HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:33:20] "[35m[1mGET /mission/test HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:33:51] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:33:53] "[35m[1mGET /mission/test HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:17] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:19] "[35m[1mGET /mission/test HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1498, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1489, in wsgi_app
+    ctx.pop(error)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\flask\app.py", line 1344, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\app.py", line 33, in close_pool
+    connection_pool.closeall()
+  File "C:\Users\Stern\Desktop\Data codekod2\python\week_4_project\.venv\Lib\site-packages\psycopg2\pool.py", line 138, in _closeall
+    raise PoolError("connection pool is closed")
+psycopg2.pool.PoolError: connection pool is closed
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:46] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:47] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:48] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:48] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:49] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:50] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:51] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:34:51] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:37:44] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:37:45] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:38:38] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:38:39] "GET /mission/test HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:root:2024-09-26 15:39:12.179849: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/, How - GET, With - SELECT * FROM mission
+ERROR:root:2024-09-26 15:39:12.180847: relation "mission" does not exist
+LINE 1: SELECT * FROM mission
+                      ^
+
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:39:12] "[31m[1mGET /mission/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:root:2024-09-26 15:39:38.364732: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/, How - GET, With - SELECT * FROM mission
+ERROR:root:2024-09-26 15:39:38.365734: relation "mission" does not exist
+LINE 1: SELECT * FROM mission
+                      ^
+
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:39:38] "[31m[1mGET /mission/ HTTP/1.1[0m" 400 -
+INFO:root:2024-09-26 15:39:39.256348: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/, How - GET, With - SELECT * FROM mission
+ERROR:root:2024-09-26 15:39:39.257348: relation "mission" does not exist
+LINE 1: SELECT * FROM mission
+                      ^
+
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:39:39] "[31m[1mGET /mission/ HTTP/1.1[0m" 400 -
+INFO:root:2024-09-26 15:39:40.022098: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/, How - GET, With - SELECT * FROM mission
+ERROR:root:2024-09-26 15:39:40.022098: relation "mission" does not exist
+LINE 1: SELECT * FROM mission
+                      ^
+
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:39:40] "[31m[1mGET /mission/ HTTP/1.1[0m" 400 -
+INFO:root:2024-09-26 15:39:40.703826: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/, How - GET, With - SELECT * FROM mission
+ERROR:root:2024-09-26 15:39:40.703826: relation "mission" does not exist
+LINE 1: SELECT * FROM mission
+                      ^
+
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:39:40] "[31m[1mGET /mission/ HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:root:2024-09-26 15:41:16.228071: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/, How - GET, With - SELECT * FROM mission
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:41:23] "[35m[1mGET /mission/ HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Stern\\Desktop\\Data codekod2\\python\\week_4_project\\services\\mission_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:root:2024-09-26 15:43:49.110197: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/, How - GET, With - select * from mission limit 20;
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:43:49] "[35m[1mGET /mission/ HTTP/1.1[0m" 201 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Stern\\Desktop\\Data codekod2\\python\\week_4_project\\services\\mission_service.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 101-162-322
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:48:12] "[35m[1mGET /mission/2 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:root:2024-09-26 15:50:33.862724: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/, How - GET, With - select * from mission limit 20;
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:50:33] "[35m[1mGET /mission/ HTTP/1.1[0m" 201 -
+INFO:root:2024-09-26 15:51:02.859954: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/, How - GET, With - select * from mission limit 20;
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:51:02] "[35m[1mGET /mission/ HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:51:22] "[35m[1mGET /mission/4 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:root:2024-09-26 15:53:44.924926: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/4, How - GET, With - select * from mission where mission_id = %s;
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:53:44] "[35m[1mGET /mission/4 HTTP/1.1[0m" 201 -

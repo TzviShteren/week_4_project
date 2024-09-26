@@ -8,6 +8,8 @@ from db import connection_pool
 from services.normal_service import normalize_db
 
 app = Flask(__name__)
+app.config['ENV'] = 'development'
+app.config['DEBUG'] = True
 
 logging.basicConfig(filename='db_logs.log', level=logging.INFO)
 
@@ -27,10 +29,10 @@ app.register_blueprint(mission_bp, url_prefix="/mission")
 app.register_blueprint(normalize_bp, url_prefix="/normalize")
 
 
-@app.teardown_appcontext
-def close_pool(exception=None):
-    if connection_pool:
-        connection_pool.closeall()
+# @app.teardown_appcontext
+# def close_pool(exception=None):
+#     if connection_pool:
+#         connection_pool.closeall()
 
 
 if __name__ == '__main__':

@@ -11,6 +11,6 @@ def log(data):
         f'{datetime.datetime.now()}: Accessed by: IP - {data["ip"]}, Where - {data["endpoint"]}, How - {data["method"]}')
 
 
-def log_query(data):
+def log_query(data, query):
     logging.info(
-        f'{datetime.datetime.now()}: Accessed by: IP - {data["ip"]}, Where - {data["endpoint"]}, How - {data["method"]}, With - {data["query"]}')
+        f'{datetime.datetime.now()}: Accessed by: IP - {data["ip"]}, Where - {data["endpoint"]}, How - {data["method"]}, With - {query}')
