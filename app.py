@@ -1,4 +1,7 @@
 from flask import Flask, request
+
+from controllers.mission_controller import mission_bp
+from controllers.normalize_controller import normalize_bp
 from services.logger import *
 import logging
 from db import connection_pool
@@ -20,6 +23,10 @@ def hello_world():
     return 'Hello World!'
 
 
+app.register_blueprint(mission_bp, url_prefix="/mission")
+app.register_blueprint(normalize_bp, url_prefix="/normalize")
+
+
 @app.teardown_appcontext
 def close_pool(exception=None):
     if connection_pool:
@@ -27,5 +34,6 @@ def close_pool(exception=None):
 
 
 if __name__ == '__main__':
-    normalize_db()
     app.run(debug=True)
+
+# normalize_db()
