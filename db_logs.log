@@ -566,3 +566,13 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 122-503-545
 INFO:root:2024-09-26 15:53:44.924926: Accessed by: IP - 127.0.0.1, Where - http://127.0.0.1:5000/mission/4, How - GET, With - select * from mission where mission_id = %s;
 INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 15:53:44] "[35m[1mGET /mission/4 HTTP/1.1[0m" 201 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 122-503-545
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 16:00:14] "[31m[1mGET /normalize/start HTTP/1.1[0m" 405 -
+INFO:root:Tables create successfully
+INFO:root:Tables normalize successfully
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2024 16:00:22] "[35m[1mPOST /normalize/start HTTP/1.1[0m" 201 -
