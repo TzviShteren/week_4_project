@@ -16,8 +16,10 @@ Execution Time: 53.837 ms
 
 נראה שהכי טוב לעשות אינדוקס ל: extract(year from mission_date
 כי אני משתמש בו הרבה ויש פה סוג של חילוץ
+
 קוד:
 CREATE INDEX idx_mission_year ON mission (extract(year from mission_date));
+
 כשאני מריץ EXPLAIN ANALYZE על השאילתה הראשונה לאחר ינדוקס:
 Hash Join  (cost=40.25..65.50 rows=5 width=72) (actual time=3.585..3.588 rows=4 loops=1)
   Hash Cond: (((air_force_missions.country)::text = (air_force_missions_1.country)::text) AND (air_force_missions.mission_count = (max(air_force_missions_1.mission_count))))
@@ -56,4 +58,29 @@ Group  (cost=5959.71..5964.68 rows=48 width=43) (actual time=91.944..95.230 rows
 Planning Time: 0.211 ms
 Execution Time: 95.271 ms
 נראה שהכי טוב לעשות אינדוקס ל: airborne_aircraft
-מכיוון שאני עושה חיפוש 
+מכיוון שאני עושה חיפוש עליו
+
+קוד:
+CREATE INDEX idx_airborne_aircraft ON mission (airborne_aircraft);
+
+כשאני מריץ EXPLAIN ANALYZE על השאילתה השנייה לאחר ינדוקס:
+Group  (cost=5959.71..5964.68 rows=48 width=43) (actual time=51.862..56.049 rows=21 loops=1)
+"  Group Key: target_country, bomb_damage_assessment"
+  ->  Gather Merge  (cost=5959.71..5964.48 rows=40 width=43) (actual time=51.858..56.039 rows=21 loops=1)
+        Workers Planned: 2
+        Workers Launched: 2
+        ->  Group  (cost=4959.69..4959.84 rows=20 width=43) (actual time=11.345..11.349 rows=7 loops=3)
+"              Group Key: target_country, bomb_damage_assessment"
+              ->  Sort  (cost=4959.69..4959.74 rows=20 width=43) (actual time=11.344..11.345 rows=11 loops=3)
+"                    Sort Key: target_country, bomb_damage_assessment"
+                    Sort Method: quicksort  Memory: 27kB
+                    Worker 0:  Sort Method: quicksort  Memory: 25kB
+                    Worker 1:  Sort Method: quicksort  Memory: 25kB
+                    ->  Parallel Seq Scan on mission  (cost=0.00..4959.26 rows=20 width=43) (actual time=6.700..11.190 rows=11 loops=3)
+                          Filter: ((bomb_damage_assessment IS NOT NULL) AND ((airborne_aircraft)::integer > 5))
+                          Rows Removed by Filter: 59416
+Planning Time: 0.176 ms
+Execution Time: 56.094 ms
+
+נראה שעדיין זה לא מועיל בהרבה אבל לפחות מועיל מעט
+

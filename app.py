@@ -29,10 +29,10 @@ app.register_blueprint(mission_bp, url_prefix="/mission")
 app.register_blueprint(normalize_bp, url_prefix="/normalize")
 
 
-# @app.teardown_appcontext
-# def close_pool(exception=None):
-#     if connection_pool:
-#         connection_pool.closeall()
+@app.teardown_appcontext
+def close_pool(exception=None):
+    if connection_pool:
+        connection_pool.closeall()
 
 
 if __name__ == '__main__':
